@@ -1,0 +1,24 @@
+一、浏览器内核
+    由两部分组成：渲染引擎（layout enginner）和JS引擎。
+
+    ①渲染引擎，负责获取网页内容（html、css、图像等等）,以及计算网页显示方式，然后输出到显示器或打印机。
+    ②Js引擎，解析javascript语言，执行js语言实行网页动态效果。
+
+    常见浏览器：
+    ㈠Trident（IE内核）
+    IE、360急速浏览器、百度浏览器、遨游等等。
+
+    ㈡Gecko（Mozilla Firefox）
+
+    ㈢webkit（Safari）
+l
+    ㈣Blink（chrome）
+
+    ㈤Presto（Opera）
+    最新Opera浏览器已加入chrome。
+
+
+二、Web标准
+    Web标准不是某一个标准，而是由W3C和其他标准化组织制定的一系列标准的集合主要包括结构、表现和行为三个方面。
+    
+    
