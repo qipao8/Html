@@ -1,0 +1,50 @@
+HTML标签
+
+一、标签的语义化
+    即标签的含义
+
+二、标签的分类
+
+    1、标题标签（head）
+    <h1>（常用与logo）、<h2>、、、<h6>
+
+    2、段落标签(paragraph)
+    <P>
+
+    3、水平线标签（horizontal）
+    <hr />
+
+    4、换行标签（break）
+    <br />
+
+    5、盒标签(没有语义)
+    <div>、<span>
+
+    6、文本格式化标签
+    粗体：<b>、<strong>
+    斜体：<i>、<em>
+    加删除线：<s>、<del>
+    加下划线：<u>、<ins>
+
+    7、图像标签（image）
+    <img src="图像url" alt="图像无法显示时的替换文本" title="鼠标悬停时文本" width="宽" height="高" border="图像边框宽度" />
+
+    8、链接标签(anchor)
+    <a href="链接地址" target="目标窗口弹出方式"></a>
+
+    target="_blank|_self|_parent|_top|framename"  
+    值	    描述
+    _blank	在新窗口中打开被链接文档。
+    _self	默认。在链接所在的当前框架中打开被链接文档。
+    _parent	在父框架集中打开被链接文档。
+    _top	在本窗口中打开被链接文档。
+    framename	在指定的框架中打开被链接文档。
+
+    锚点定位
+    <a href="#id值"></a>
+    <p id="id值"></p>
+
+    9、base标签
+    <base href="" target=""/>
+    <base> 标签为页面上的所有的相对链接规定默认 URL 或默认目标。在一个文档中，最多能使用一个 <base> 元素。<base> 标签必须位于 <head> 元素内部。把 <base> 标签排在 <head> 元素中第一个元素的位置，这样 head 区域中其他元素就可以使用 <base> 元素中的信息了。
+
