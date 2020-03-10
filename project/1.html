@@ -5,16 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="text/css">
+    /*清除所有外边距和内填充*/
+    *{
+        margin:0;
+        padding:0;
+    }
+    p{
+        color: blue;
+    }
+    h1{
+        text-align: center;
+        color: red;
+        text-decoration:underline;
+        text-decoration-color:yellow;
+    }
+    ol{
+        list-style-position: outside;
+    }
+    </style>
 </head>
 
 <body>
-    <h1 style="text-align: center;color: red;">前端修炼之路</h1>
+    <h1>前端修炼之路</h1>
     <hr />
     <ol>
         <li>
             <h2>html基础</h2>
             <div style="display: inline-block;">
-                <img src="1.jpg" width="200" height="300" style="float:left; " />
+                <img src="./image/1.jpg" width="200" height="300" style="float:left; " />
                 <p style="display:inline;"><b style="color: red;">注意：</b></p>
                 <p>1、li标签是块级元素。</p>
                 <p>2、元素的水平方向浮动，意味着元素只能左右移动而不能上下移动。</p>
@@ -28,9 +47,12 @@
                     5、浮动元素之前的元素将不会受到影响。</p>
             </div>
         </li>
+        <br />
         <li>
             <h2>css样式</h2>
+
         </li>
+        <br />
         <li>
             <h2>js脚本</h2>
         </li>
