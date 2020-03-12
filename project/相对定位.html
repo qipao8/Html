@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 600px;
+            border:1px solid #000;
+            margin: 100px auto;
+            padding-left: 20px;
+        }
+        .box div{
+            width: 100px;
+            height:100px;
+        }
+        .div1{
+            background-color: #f00;
+        }
+        .div2{
+            background-color: #0f0;
+            position: relative;/* 相对定位 */
+            left: 100px;/* 相对自己 */
+        }
+        .div3{
+            background-color: #00f;
+        }
+
+        input[type="text"]{
+            font-size: 36px;
+        }
+        input[type="button"]{
+            position: relative;
+            top:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+    </div>
+
+    <input type="text"><input type="button" value="检测用户名">
+</body>
+</html>

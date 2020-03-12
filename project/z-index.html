@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .div1 {
+            background-color: #f00;
+            /* 绝对定位 */
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            z-index: 3;/* z-index大的会压盖小的 */
+        }
+
+        .div2 {
+            background-color: #00f;
+            /* 绝对定位 */
+            position: relative;
+            left: 200px;
+            top: 200px;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+
+</html>
