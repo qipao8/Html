@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: myfirstAnim 3s;
+            -webkit-animation: myfirstAnim 3s;
+        }
+        .div2 {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: #000;
+            animation: mySecondAnim 10s;
+            -webkit-animation: mySecondAnim 10s;
+        }
+
+        @keyframes myfirstAnim {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        @-webkit-keyframes myfirstAnim {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+        @keyframes mySecondAnim{
+            0%{
+                background-color: red;
+                left: 0px;
+            }
+            25%{
+                background-color: #00f;
+            }
+            50%{
+                rotate: 90deg;
+            }
+            75%{
+                left: 200px;
+            }
+            100%{
+                background-color: green;
+                left: 0px;
+            }
+        }
+        @-webkit-keyframes mySecondAnim{
+            0%{
+                background-color: #000;
+                left: 0px;
+            }
+            25%{
+                background-color: #00f;
+            }
+            50%{
+                rotate: 90deg;
+            }
+            75%{
+                left: 200px;
+            }
+            100%{
+                background-color: green;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+
+</html>

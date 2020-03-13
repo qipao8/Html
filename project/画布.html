@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画布</title>
+    <style>
+        #canvas {
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="400px" height="400px"></canvas>
+    <script>
+        var c = document.getElementById("canvas");
+        var cxt = c.getContext("2d");
+        cxt.fillStyle = "#ff0000";
+        cxt.fillRect(0, 0, 100, 100);
+
+        /*    绘制图片
+             var img=new Image();
+                img.onload=function(){
+                    cxt.drawImage(img,0,0);
+                }
+                img.src="image/4.png";
+                */
+    </script>
+</body>
+
+</html>

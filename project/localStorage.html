@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web存储</title>
+    <style>
+        #ta{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        var ta;
+        var btn;
+        window.onload=function(){
+            ta=document.getElementById("ta");
+            if(localStorage.text){
+                ta.value=localStorage.text;
+            }
+            btn=document.getElementById("btn");
+            btn.onclick=function(){
+                alert(ta.value);
+                localStorage.text=ta.value;
+            }
+        }
+    </script>
+</head>
+<body>
+    <textarea id="ta" cols="30" rows="10"></textarea>
+    <button id="btn">save</button>
+</body>
+</html>
