@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var i = 12;
+        function abc() {
+            console.log(i);//undefined,变量提升了！
+            var i = 10;
+        }
+        abc();
+
+
+        console.log(typeof a, a);
+        /* 
+        function,
+        ƒ a(){
+            console.log('aaaaa');
+        }
+        函数与变量同名，函数声明会替换变量声明
+        */
+
+        function a() {
+            console.log('aaaaa');
+        }
+
+        var a = 1;
+        console.log(typeof a, a);//number,1
+        //函数未调用
+
+
+        var k = '678';
+        function fun() {
+            var k = '89';
+            console.log(this.k);
+        }
+        var o1 = {
+            k: '123',
+            f: fun,
+        }
+        var o2 = {
+            k: '456',
+            f: fun,
+        }
+
+        o1.f();//123
+        o2.f();//456
+
+        //this运行在哪个对象下，就指向那个对象。
+
+
+        /* 最易错的this题 */
+        var x = {
+            age: 18,
+            fun: function () {
+                console.log(this.age);
+            }
+        }
+
+        var y = {
+            age: 16,
+            fun: x.fun,
+        }
+        y.fun();//16!!!不是18！！！
+        //x.fun是将函数作为值传给y的fun，并未调用！相当于复制函数
+    </script>
+</body>
+
+</html>

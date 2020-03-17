@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串对象</title>
+</head>
+
+<body>
+    <script>
+        var s = 'jhgfjlkABCfhs';
+        console.log(s.indexOf('g'));//查找
+
+        console.log(s.substr(2, 5));
+        //截取
+        //开始位置2，长度5
+
+        console.log(s.toLowerCase());//全小写
+
+        console.log(s.toUpperCase());//全大写
+
+        console.log(s.replace('j','!'));
+        //替换首个'j'
+
+        console.log(s.replace(/j/g,'?'));
+        //全部替换（不忽略大小写）
+
+        console.log(s.replace(RegExp(s,"g"),'123'))
+        //全局匹配
+
+    </script>
+</body>
+
+</html>
