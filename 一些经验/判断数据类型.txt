@@ -1,0 +1,54 @@
+1、typeof(变量名)
+返回值为字符串且只能区分基本数据类型，如果是引用类型（复杂数据类型：对象和数组），那么返回的都是Object，无法具体区分
+
+2、 instanceof——只适用于对象类型，不适用于简单类型的数据类型，返回boolean值
+例1：只要是对象类型的都可以区分
+
+arr instanceof Array                          //true
+new Date() instanceof Date              //true
+
+
+例2：使用instanceof来检验F是否属于构造函数fn的实例
+
+var F = new fn();                           //实例化构造函数
+F instanceof fn ;                           //true,说明F是属于fn的实例
+
+
+问题：对于不同的构造函数，同一个实例都返回了true，如下F对Object同样返回了true
+
+F instanceof Object                        //true 
+
+instanceof原理:左边是一个实例对象，右边是一个构造函数，instanceof会检查构造函数的原型对象prototype是否在左边对象的原型链上，有则返回true,否则返回false.
+
+
+3、constructor——本身是prototype对象的一个属性，默认指向prototype属性所在的构造函数，此处我们用来判断数据类型。返回boolean值
+作用：1.判断数据类型,包括数组、日期、对象等，可以区分清楚
+语法：变量名.constructor === 数据类型
+
+例：
+
+str.constructor===String   //true
+num.constructor===Number   //true
+obj.constructor===Object   //true
+arr.constructor===Array   //true
+new Date().constructor===Date   //true
+
+4、jQuery.type()——称之为万能
+作用：判断数据类型。PS.其判断的结果显示都是小写的字符串形式
+语法：jQuery.type(变量名)
+
+
+例：包括日期、正则、undefined、null等都是可以判断的
+
+jQuery.type(str)  //string
+jQuery.type(num)   //number
+jQuery.type(arr)   //array
+jQuery.type(obj)  //object
+jQuery.type(fn)   //funtion
+
+
+总结：
+typeof()——判断简单的数据类型，无法菊粉复杂数据类型，例如像Object和Array返回的都是Object
+instanceof ——仅适用于对象来区分数据类型。同时还可以判断某个实例是否是某个构造函数的实例，但是会出现对应多个构造函数的情况
+constructor——判断所有的数据类型。当然他的本质是盘算prototyep属性所在的函数的
+jQuery.type()——判断所有的数据类型。

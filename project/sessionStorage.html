@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web存储</title>
     <script>
-        var num=0;
+        var num = 0;
         var txt;
         var btn;
-        window.onload=function(){
-            txt=document.getElementById("txt");
-            btn=document.getElementById("addbtn");
-            if(sessionStorage.num){
-                num=sessionStorage.num;
-            }else{
-                num=0;
+        window.onload = function () {
+
+            txt = document.getElementById("txt");
+            btn = document.getElementById("addbtn");
+
+            function showNum() {
+                txt.innerHTML = num;
             }
-            btn.onclick=function(){
+            btn.onclick = function () {
                 num++;
-                sessionStorage.num=num;
+                sessionStorage.num = num;
                 showNum();
             }
-            function showNum(){
-                txt.innerHTML=num;
+            if (sessionStorage.num) {
+                num = sessionStorage.num;
+            } else {
+                num = 0;
             }
         }
     </script>
 </head>
+
 <body>
     <span id="txt">0</span>
     <button id="addbtn">add</button>
 </body>
+
 </html>
